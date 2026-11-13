@@ -99,7 +99,7 @@ export const DEMO_CATALOG = {
   currency: 'UAH', manufacturingReady: false,
   dimensionsMm: { bodyThickness: 16, backThickness: 4, baseHeight: 720, baseDepth: 560,
     upperDepth: 320, plinthHeight: 100, defaultTopThickness: 38, upperBottom: 1450,
-    ceilingGap: 20, maxTallHeight: 2400, minUAisle: 900 },
+    ceilingGap: 20, maxTallHeight: 2400, maxUpperHeight: 1500, minUAisle: 900 },
   baseWidthsMm: [150, 200, 300, 400, 450, 500, 600, 800, 900],
   moduleTypes: ['base', 'drawers', 'cargo', 'sink', 'dw', 'hob', 'hob_oven', 'corner',
     'oven', 'fridge', 'fridge_free', 'filler', 'reserve', 'up', 'up_corner', 'hood', 'shelf'],
@@ -222,10 +222,11 @@ export function plan(input) {
     if (required > walls[wi].length + 1e-8) errors.push(`Стіна ${wi + 1}: для цього набору потрібно щонайменше ${required} мм, введено ${walls[wi].length} мм.`);
   });
   const upOpt = OPT.uppers[input.opt.uppers];
-  const availableUpper = ceiling - 1450 - 20;
-  const upH = upOpt.h === null ? Math.min(1250, availableUpper) : upOpt.h;
+  const { upperBottom, ceilingGap, maxUpperHeight } = DEMO_CATALOG.dimensionsMm;
+  const availableUpper = ceiling - upperBottom - ceilingGap;
+  const upH = upOpt.h === null ? Math.min(maxUpperHeight, availableUpper) : upOpt.h;
   if (upH > availableUpper || (upOpt.h === null && upH < 360)) errors.push('Верхні шафи не поміщаються під заданою стелею. Оберіть нижчі шафи або полиці.');
-  if (upOpt.h === null && availableUpper > 1250) errors.push('Один ряд демонстраційних шаф не досягає цієї стелі. Оберіть стандартні або подовжені шафи.');
+  if (upOpt.h === null && availableUpper > maxUpperHeight) errors.push('Один ряд демонстраційних шаф не досягає цієї стелі. Оберіть стандартні або подовжені шафи.');
   if (tallSet.length && ceiling < 2100) errors.push('Для демонстраційних пеналів потрібна висота кімнати від 2100 мм.');
   if (errors.length) return invalidPlan(errors, warnings);
 

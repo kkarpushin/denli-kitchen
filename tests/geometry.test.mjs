@@ -161,3 +161,39 @@ test('microwave column preserves a separately requested oven under the hob', () 
   const fronts = cutList(p, f).parts.filter((part) => part.name === 'Фасад пенала');
   close(fronts[0].l * fronts[0].qty, 2400 - 450 - 8);
 });
+
+
+test('default demo heights and common room heights support every starter style', () => {
+  const { upperBottom, ceilingGap, maxUpperHeight } = DEMO_CATALOG.dimensionsMm;
+  for (const layout of ['straight', 'L', 'U']) for (const height of [2700, 2750, 2800, 2900]) {
+    for (const [style, spec] of Object.entries(STYLES)) {
+      const f = input(layout, height === 2750 ? 3700 : 3800);
+      f.app.oven = 'under'; f.opt = { ...spec.d }; f.style = style;
+      f.walls.forEach((wall) => { wall.height = height; });
+      const p = plan(f);
+      assert.equal(p.valid, true, `${layout}/${height}/${style}: ${p.errors.join('; ')}`);
+      assert.ok(price(p, f)?.total > 0);
+      for (const wall of p.walls) {
+        const uppers = [...wall.uppers].sort((a, b) => a.x - b.x);
+        for (const [index, u] of uppers.entries()) {
+          assert.ok(u.h <= maxUpperHeight);
+          assert.ok(upperBottom + u.h + ceilingGap <= height);
+          assert.ok(u.x >= 0 && u.x + u.w <= wall.length);
+          if (index) assert.ok(u.x >= uppers[index - 1].x + uppers[index - 1].w);
+        }
+      }
+      if (spec.d.uppers === 'ceiling') close(p.upH + upperBottom + ceilingGap, height);
+    }
+  }
+});
+
+test('to-ceiling upper modules retain an explicit catalog height limit', () => {
+  const { upperBottom, ceilingGap, maxUpperHeight } = DEMO_CATALOG.dimensionsMm;
+  const f = input();
+  f.walls[0].height = upperBottom + ceilingGap + maxUpperHeight;
+  assert.equal(plan(f).valid, true);
+  f.walls[0].height += 10;
+  const p = plan(f);
+  assert.equal(p.valid, false); assert.deepEqual(p.walls, []); assert.equal(price(p, f), null);
+  assert.ok(p.errors.some((error) => error.includes('не досягає цієї стелі')));
+});

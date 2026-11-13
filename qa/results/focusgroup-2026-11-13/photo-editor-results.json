@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "fixture": "uploaded generated demo JPEG; no real accuracy claim",
+  "checks": [
+    "eight pointer-dragged annotations",
+    "zoom 1–4 and pan preserve geometry",
+    "off-centre handle press does not jump",
+    "selector/nudge invalidates scale",
+    "empty dimensions and budget blocked",
+    "default style at measured 2750 mm",
+    "actual JSON downloads retain photo provenance"
+  ],
+  "runs": [
+    {
+      "viewport": 390,
+      "status": "passed",
+      "dimensions": [
+        3700,
+        2750
+      ],
+      "source": "photo",
+      "quote_total": 251000,
+      "json_download": "photo-editor-project-390.json",
+      "browser_errors": []
+    },
+    {
+      "viewport": 1280,
+      "status": "passed",
+      "dimensions": [
+        3700,
+        2750
+      ],
+      "source": "photo",
+      "quote_total": 251000,
+      "json_download": "photo-editor-project-1280.json",
+      "browser_errors": []
+    }
+  ]
+}

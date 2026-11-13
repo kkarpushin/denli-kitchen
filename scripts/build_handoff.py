@@ -189,7 +189,7 @@ npm start</code></pre>
 npm run build
 npm run examples</code></pre>
 <p>Для браузерного прогона нужны Python 3.10+ и Playwright/Chromium. Установите зависимости QA по <a href="README.md">README</a>. Скрипты <code>qa/browser_test.py</code> и <code>qa/browser_provenance.py</code> принимают адрес приложения и путь к браузеру через <code>DENLI_TEST_URL</code> и <code>DENLI_CHROME</code>.</p>
-<div class="callout"><strong>Объём имеющейся проверки.</strong> В исходной версии зафиксированы 12 синтетических Node-проверок, включая 480 комбинаций планировки, и браузерные сценарии на ширинах 1440, 768 и 390 px. Они проверяют расчётный код и интерфейс. Реальный SketchUp, точность замеров и производственная смета этими проверками не покрываются.</div>
+<div class="callout"><strong>Объём имеющейся проверки.</strong> В версии 0.1.1 — 14 синтетических Node-проверок, включая 480 комбинаций планировки и 72 сочетания высоты и стиля, и браузерные сценарии на ширинах 1440, 768, 390 и 320 px. Они проверяют расчётный код и интерфейс. Реальный SketchUp, точность замеров и производственная смета этими проверками не покрываются.</div>
 <p>Для ознакомления: пройдите сценарий с ручными размерами, сохраните JSON, затем повторите с фото и эталоном. Сравните происхождение размеров в итоговом документе. Пробный импорт в SketchUp выполняйте по <a href="sketchup/README.md">инструкции адаптера</a>.</p></section>
 
 <section id="files" class="chapter"><div class="eyebrow">03 / Навигация по проекту</div><h2>Где продолжать работу.</h2><div class="table-scroll file-map" tabindex="0" role="region" aria-label="Карта файлов"><table><thead><tr><th scope="col">Файл или раздел</th><th scope="col">Назначение</th></tr></thead><tbody>
@@ -200,6 +200,7 @@ npm run examples</code></pre>
 <tr><td><a href="sketchup/README.md">sketchup/README.md</a> · <a href="sketchup/denli_draft.rb">denli_draft.rb</a></td><td>Порядок запуска и черновой импорт проекта в SketchUp.</td></tr>
 <tr><td><a href="docs/research/PHOTO_MEASUREMENT.md">docs/research/PHOTO_MEASUREMENT.md</a></td><td>Полный обзор научных методов, патентных пересечений и эксперимента.</td></tr>
 <tr><td><a href="docs/INTEGRATION.md">docs/INTEGRATION.md</a></td><td>Форматы SketchUp / VIYAR, контракт детали и критерии сверки.</td></tr>
+<tr><td><a href="docs/FOCUS_GROUP.md">docs/FOCUS_GROUP.md</a></td><td>Сценарий показа, проба на фото участника и вопросы для обсуждения.</td></tr>
 <tr><td><a href="docs/ACCEPTANCE.md">docs/ACCEPTANCE.md</a></td><td>Критерии приёмки следующего этапа и порядок передачи команде.</td></tr>
 <tr><td><a href="examples/straight.json">examples/straight.json</a> · <a href="examples/L.json">L.json</a> · <a href="examples/U.json">U.json</a></td><td>Три демонстрационных проекта для проверки и пробного импорта.</td></tr>
 <tr><td><a href="tests/">tests/</a> · <a href="qa/">qa/</a></td><td>Расчётные и браузерные проверки.</td></tr>

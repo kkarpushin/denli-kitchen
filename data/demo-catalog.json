@@ -16,6 +16,7 @@
       "upperBottom": 1450,
       "ceilingGap": 20,
       "maxTallHeight": 2400,
+      "maxUpperHeight": 1500,
       "minUAisle": 900
     },
     "baseWidthsMm": [

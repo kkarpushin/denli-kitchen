@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": [
+    "unscaled defaults stay unscaled",
+    "demo resets reference",
+    "point edits require recalculation",
+    "new choice wins pending image decode",
+    "explicit manual entry accepted"
+  ],
+  "browser_errors": []
+}

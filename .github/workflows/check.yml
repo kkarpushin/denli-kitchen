@@ -14,4 +14,4 @@ jobs:
       - run: node --check app.mjs
       - run: npm run build
       - run: npm run examples && git diff --exit-code -- examples
-      - run: python3 -m py_compile qa/browser_test.py qa/browser_provenance.py
+      - run: python3 -m py_compile qa/browser_test.py qa/browser_provenance.py qa/browser_focusgroup.py qa/browser_photo_editor.py
