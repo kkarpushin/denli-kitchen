@@ -1,0 +1,200 @@
+{
+  "catalog": {
+    "schema": "denli-demo-catalog/1",
+    "source": "invented-starter-catalog",
+    "validated": false,
+    "currency": "UAH",
+    "manufacturingReady": false,
+    "dimensionsMm": {
+      "bodyThickness": 16,
+      "backThickness": 4,
+      "baseHeight": 720,
+      "baseDepth": 560,
+      "upperDepth": 320,
+      "plinthHeight": 100,
+      "defaultTopThickness": 38,
+      "upperBottom": 1450,
+      "ceilingGap": 20,
+      "maxTallHeight": 2400,
+      "minUAisle": 900
+    },
+    "baseWidthsMm": [
+      150,
+      200,
+      300,
+      400,
+      450,
+      500,
+      600,
+      800,
+      900
+    ],
+    "moduleTypes": [
+      "base",
+      "drawers",
+      "cargo",
+      "sink",
+      "dw",
+      "hob",
+      "hob_oven",
+      "corner",
+      "oven",
+      "fridge",
+      "fridge_free",
+      "filler",
+      "reserve",
+      "up",
+      "up_corner",
+      "hood",
+      "shelf"
+    ],
+    "fixedModules": {
+      "sink": 600,
+      "dishwasher": [
+        450,
+        600
+      ],
+      "hob": 600,
+      "ovenColumn": 600,
+      "fridgeColumn": 600,
+      "freestandingFridgeSpace": 650,
+      "blindCorner": 1000,
+      "cornerReserve": 600
+    },
+    "limits": {
+      "minWallLength": 500,
+      "maxWallLength": 12000,
+      "minCeiling": 1800,
+      "maxCeiling": 5000
+    },
+    "unsupported": [
+      "island-clearance",
+      "appliance-specific-fit",
+      "utilities-routing",
+      "doors-and-windows",
+      "machining",
+      "structural-checks"
+    ],
+    "disclaimer": "Авторські демонстраційні модулі та вигадані ставки. Не каталог DENLI, не виробниче креслення і не комерційна пропозиція."
+  },
+  "options": {
+    "front": {
+      "dsp": {
+        "name": "ДСП Egger",
+        "m2": 950
+      },
+      "pvc": {
+        "name": "МДФ у плівці ПВХ",
+        "m2": 2400
+      },
+      "agt": {
+        "name": "AGT / акрил, суперматовий",
+        "m2": 3300
+      },
+      "mdf_paint": {
+        "name": "Фарбований МДФ",
+        "m2": 4300
+      },
+      "shaker": {
+        "name": "Фарбований МДФ, рамковий",
+        "m2": 5400
+      },
+      "veneer": {
+        "name": "Натуральний шпон",
+        "m2": 6800
+      }
+    },
+    "handles": {
+      "gola": {
+        "name": "Без ручок, профіль Gola",
+        "perM": 750,
+        "perFront": 0
+      },
+      "profile": {
+        "name": "Ручки-профілі",
+        "perM": 0,
+        "perFront": 380
+      },
+      "classic": {
+        "name": "Класичні ручки",
+        "perM": 0,
+        "perFront": 420
+      }
+    },
+    "top": {
+      "dsp": {
+        "name": "ДСП 38 мм",
+        "perM": 1900,
+        "splash": 900,
+        "cut": 300
+      },
+      "compact": {
+        "name": "Компакт-плита 12 мм",
+        "perM": 9800,
+        "splash": 6200,
+        "cut": 1200
+      },
+      "quartz": {
+        "name": "Кварцовий камінь",
+        "perM": 19000,
+        "splash": 9500,
+        "cut": 1500
+      },
+      "ceramic": {
+        "name": "Кераміка",
+        "perM": 24000,
+        "splash": 12000,
+        "cut": 1800
+      }
+    },
+    "uppers": {
+      "std": {
+        "name": "Стандартні, 720 мм",
+        "h": 720
+      },
+      "tall": {
+        "name": "Подовжені, 900 мм",
+        "h": 900
+      },
+      "ceiling": {
+        "name": "До стелі",
+        "h": null
+      },
+      "none": {
+        "name": "Без верхніх, полиці",
+        "h": 0
+      }
+    },
+    "fittings": {
+      "std": {
+        "name": "GTV / Muller",
+        "hinge": 120,
+        "drawer": 1250,
+        "lift": 1300
+      },
+      "blum": {
+        "name": "Blum, Австрія",
+        "hinge": 290,
+        "drawer": 3300,
+        "lift": 3900
+      }
+    }
+  },
+  "rates": {
+    "body_m2": 560,
+    "back_m2": 190,
+    "cut_m2": 35,
+    "edge_m": 22,
+    "edge_front_m": 38,
+    "leg": 45,
+    "plinth_m": 420,
+    "shelf_pin": 6,
+    "fridge_kit": 1100,
+    "sink_tray": 650,
+    "led_m": 1100,
+    "K": 2.2,
+    "K_fit": 1.35,
+    "install": 0.08,
+    "delivery": 2500
+  }
+}

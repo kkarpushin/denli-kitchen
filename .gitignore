@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.*
+*.pem
+*.key
+.venv/
+__pycache__/
+*.pyc
+qa/results/current/
+.openai/
+.sites-runtime/
+.DS_Store

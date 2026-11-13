@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: known rectangular scene survives perspective, rotation and explicit orientation
+ok 1 - known rectangular scene survives perspective, rotation and explicit orientation
+  ---
+  duration_ms: 5.056995
+  type: 'test'
+  ...
+# Subtest: reference orientation must not be inferred from foreshortened image aspect
+ok 2 - reference orientation must not be inferred from foreshortened image aspect
+  ---
+  duration_ms: 0.337234
+  type: 'test'
+  ...
+# Subtest: image translation and resolution do not change physical dimensions
+ok 3 - image translation and resolution do not change physical dimensions
+  ---
+  duration_ms: 14.576561
+  type: 'test'
+  ...
+# Subtest: invalid, crossed, nonconvex and projectively singular inputs fail closed
+ok 4 - invalid, crossed, nonconvex and projectively singular inputs fail closed
+  ---
+  duration_ms: 0.377214
+  type: 'test'
+  ...
+# Subtest: reference outside wall or with incompatible opposite edges is rejected
+ok 5 - reference outside wall or with incompatible opposite edges is rejected
+  ---
+  duration_ms: 0.353184
+  type: 'test'
+  ...
+# Subtest: jitter spread is reproducible sensitivity, never an accuracy promise
+ok 6 - jitter spread is reproducible sensitivity, never an accuracy promise
+  ---
+  duration_ms: 57.100878
+  type: 'test'
+  ...
+# Subtest: module filling conserves fractional space and cache results cannot be mutated
+ok 7 - module filling conserves fractional space and cache results cannot be mutated
+  ---
+  duration_ms: 20.92711
+  type: 'test'
+  ...
+# Subtest: impossible layouts and malformed input return no buildable plan or price
+ok 8 - impossible layouts and malformed input return no buildable plan or price
+  ---
+  duration_ms: 1.477306
+  type: 'test'
+  ...
+# Subtest: accepted layouts fit every wall and yield positive draft parts and an additive quote
+ok 9 - accepted layouts fit every wall and yield positive draft parts and an additive quote
+  ---
+  duration_ms: 64.727592
+  type: 'test'
+  ...
+# Subtest: tall fronts split cabinet face rather than billing two full-height faces
+ok 10 - tall fronts split cabinet face rather than billing two full-height faces
+  ---
+  duration_ms: 0.534095
+  type: 'test'
+  ...
+# Subtest: exported draft catalog and rates match the engine source
+ok 11 - exported draft catalog and rates match the engine source
+  ---
+  duration_ms: 0.670607
+  type: 'test'
+  ...
+# Subtest: microwave column preserves a separately requested oven under the hob
+ok 12 - microwave column preserves a separately requested oven under the hob
+  ---
+  duration_ms: 0.218452
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 265.236047

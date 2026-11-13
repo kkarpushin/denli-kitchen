@@ -1,0 +1,20 @@
+[
+  {
+    "viewport": 1440,
+    "layout": "straight",
+    "browser_errors": [],
+    "quote_total": 99000
+  },
+  {
+    "viewport": 390,
+    "layout": "L",
+    "browser_errors": [],
+    "quote_total": 183000
+  },
+  {
+    "viewport": 768,
+    "layout": "U",
+    "browser_errors": [],
+    "quote_total": 268000
+  }
+]
