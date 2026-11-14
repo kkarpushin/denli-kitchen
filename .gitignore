@@ -10,4 +10,5 @@ __pycache__/
 qa/results/current/
 .openai/
 .sites-runtime/
+.wrangler/
 .DS_Store
